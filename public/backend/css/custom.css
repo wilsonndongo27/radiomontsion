@@ -1,0 +1,94 @@
+button{
+    font-size: 14px !important;
+    border-radius: 5px !important;
+}
+li{
+    font-size: 14px !important;
+}
+.skin-black .main-header .logo {
+    background-color: #0a0faf !important;
+}
+.dt-buttons .dt-button {
+    background: #3362ca !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff;
+    border: 1px solid #3362ca;
+    background-color: #3362ca;
+}
+.btnoptions{
+    border-radius: 10px;
+    background-color: #3362ca;
+    color: #fff;
+}
+.headerpage{
+    display: flex;
+}
+.addbtn{
+    font-size: 40px;
+    float: right;
+    cursor: pointer;
+    color: #3362ca;
+}
+.logoform{
+    width: 67px;
+}
+.modal-footer {
+    border-top-color: #f4f4f4;
+    display: flex !important;
+}
+.newBtn{
+    background-color: #3362ca;
+    border-color: #3362ca;
+}
+.newBtn:hover{
+    background-color: #5377c5;
+    border-color: #5377c5;
+}
+.form-control{
+    border-radius: 5px !important;
+}
+.imagecolumn{
+    width: 10%;
+}
+.imagecolumn img{
+    width: 40%;
+    height: 50px;
+}
+#userpp, .updateimage{
+    width: 100%;
+}
+.close{
+    font-size: 40px !important;
+}
+.modal-body p, input{
+    font-size: 16px !important;
+}
+.activeitem{
+    color: red;
+}
+#addCompany{
+    background-color: #3362ca;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    border-color: #3362ca;
+}
+.modal-content p{
+    color: #888 !important;
+}
+.infocompanyview{
+    color: #888 !important;
+    font-size: 18px !important;
+}
+.valuetextent{
+    width: 50%;
+}
+.ql-tooltip input{
+    display: none !important;
+}
+.emptylist{
+    font-size: 14px; 
+    margin-top:50px; 
+    color:#888
+}
