@@ -14,7 +14,7 @@ class AddDayToProgramsTable extends Migration
     public function up()
     {
         Schema::table('programs', function (Blueprint $table) {
-            $table->longText('day')->default('Jour');
+            $table->longText('day')->nullable();
         });
     }
 

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthAPI;
+use App\Http\Controllers\Api\HomeAPI;
 use App\Http\Controllers\Api\BannerAPI;
 use App\Http\Controllers\Api\NewsAPI;
 use App\Http\Controllers\Api\ProgramAPI;
@@ -28,6 +29,9 @@ Route::post('/auth', [AuthAPI::class, 'login']);
 Route::post('/register', [AuthAPI::class, 'register']);
 
 Route::group(['middleware' => 'auth:api'], function() {
+
+    /**Banner */
+    Route::get('home', [HomeAPI::class, 'index']);
     
     /**Banner */
     Route::get('banner', [BannerAPI::class, 'index']);
