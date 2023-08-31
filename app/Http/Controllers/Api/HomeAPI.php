@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-use App\Http\Resources\{NewsResource, BannerResource, ProgramResource, PodcastResource};
-use App\Models\{Programs, Banners, Podcasts, News};
+use App\Http\Resources\{NewsResource, BannerResource, ProgramResource, PodcastResource, RadioResource};
+use App\Models\{Programs, Banners, Podcasts, News, Radios};
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -40,12 +40,19 @@ class HomeAPI extends Controller
             ->paginate(5)
         );
 
+        $allradio = RadioResource::collection(
+            Radios::where('is_active', 1)
+            ->OrderBy('created_at', 'DESC')
+            ->paginate(5)
+        );
+
         return response([ 
             'status' => 200,
             'allbanner' => $allbanner,
             'allprogram' => $allprogram,
             'allpodcast' => $allpodcast,
             'allnews' => $allnews,
+            'allradio' => $allradio,
             'message' => 'Opération réussi!',
         ]);
     }
