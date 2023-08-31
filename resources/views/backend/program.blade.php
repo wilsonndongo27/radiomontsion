@@ -27,7 +27,8 @@
                         <th>Logo Programme</th>
                         <th>Titre</th>
                         <th>Label</th>
-                        <th>Date</th>
+                        <th>Jour(s) de diffusion</th>
+                        <th>Date Prochaine Diffusion</th>
                         <th>Heur début</th>
                         <th>Heur Fin</th>
                         <th>Auteur</th>
@@ -61,6 +62,7 @@
                                 </td>
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $item->label }}</td>
+                                <td>{{ Str::limit($item->day, 20, '...') }}</td>
                                 <td>{{ $item->date }}</td>
                                 <td>{{ $item->time_start }}</td>
                                 <td>{{ $item->time_end }}</td>
@@ -92,6 +94,7 @@
                                                 data-id="{{ $item->id }}"
                                                 data-title="{{ $item->title }}"
                                                 data-label="{{ $item->label }}"
+                                                data-day="{{ $item->day }}"
                                                 data-description="{{ $item->description }}"
                                                 data-date="{{ $item->date }}"
                                                 data-timestart="{{ $item->time_start }}"
@@ -171,6 +174,23 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <p>Les Jour de diffusion du programme</p>
+                            <div class="form-group label-floating" style="width: 100%;">
+                                <select name="day[]" class="form-control select" multiple>
+                                    <option value="">Selectionner</option>
+                                    <option value="Lundi">Lundi</option>
+                                    <option value="Mardi">Mardi</option>
+                                    <option value="Mercredi">Mercredi</option>
+                                    <option value="Jeudi">Jeudi</option>
+                                    <option value="Vendredi">Vendredi</option>
+                                    <option value="Samedi">Samedi</option>
+                                    <option value="Dimanche">Dimanche</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
 
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-xs-12" >
@@ -268,6 +288,23 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <p>Jour de diffusion du programme : <span class="activeitem" id="programday"></span></p>
+                            <div class="form-group label-floating" style="width: 100%;">
+                                <select name="day[]" class="form-control select" multiple>
+                                    <option value="">Selectionner</option>
+                                    <option value="Lundi">Lundi</option>
+                                    <option value="Mardi">Mardi</option>
+                                    <option value="Mercredi">Mercredi</option>
+                                    <option value="Jeudi">Jeudi</option>
+                                    <option value="Vendredi">Vendredi</option>
+                                    <option value="Samedi">Samedi</option>
+                                    <option value="Dimanche">Dimanche</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
 
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-xs-12" >

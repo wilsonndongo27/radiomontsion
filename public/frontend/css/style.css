@@ -99,13 +99,22 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 .details2{position: relative; padding-bottom: 35px;}
 .details2 .left{float: left; padding-right: 20px; color: #888888; line-height: 1.2; font-size: 14px;}
 .details2 .left span{padding: 0 10px;}
-.details2 .right{position: absolute; right: 0; top: 0;}
+.details2 .right{
+  position: absolute; 
+  right: 0px;
+  top: 0px;
+}
 
 .share1{display: inline-block; width: 16px; height: 16px; background: url(../images/icon-share.png) 0 0 no-repeat; text-decoration: none; position: absolute; right: 0; top: 2;}
 
 /* ============================= blog ====================== */
 .blog_sidebar{margin-bottom: 30px;}
-.blog_content{margin-bottom: 30px;}
+.blog_content{
+  margin-bottom: 30px;
+}
+.blog_content h2{
+
+}
 
 .latest2{padding: 0; margin: 0 0 60px; list-style: none;}
 .latest2 li{display: block; float: left; padding: 0 3px 3px 0;}
@@ -248,10 +257,18 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 
 /* ============================= audio1 end ====================== */
 
-#featured{position: relative; padding-top: 130px; padding-bottom: 80px;}
+#featured{
+  position: relative; 
+  padding-top: 58px; 
+  padding-bottom: 40px;
+}
 
 /* ============================= slick ====================== */
-.slick-slider-wrapper{padding-top: 170px; padding-bottom: 180px; position: relative;}
+.slick-slider-wrapper{
+  padding-top: 115px; 
+  padding-bottom: 130px; 
+  position: relative;
+}
 .slick-slider-wrapper .container{position: static;}
 .slick-slider{text-align: center; position: static; margin-bottom: 0;}
 .slick-slider *:focus{outline: none;}
@@ -388,7 +405,10 @@ transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -webkit-trans
 .best_list .left span{color: #fff;}
 .best_list .right{float: right; width: 70px; margin-left: 10px; text-align: right;}
 
-#collection2{position: relative; padding-top: 50px; padding-bottom: 60px;}
+#collection2{
+  position: relative; 
+  padding-bottom: 60px;
+}
 
 .disk1-img{margin-bottom: 40px;}
 .disk1{margin-bottom: 30px; padding-top: 15px;}

@@ -11,15 +11,6 @@
     <div id="content">
         <div class="container">
 
-            <h2>{{ $news->title }}</h2>
-
-            <div class="details2 clearfix">
-                <div class="left">Créé <span>|</span> Par: Admin <span>|</span> {{ $news->created_at }}</div>
-                <div class="right"><a href="https://www.facebook.com/sharer/sharer.php?u=#home&t=TITLE" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-                    target="_blank" class="share1"></a></div>
-            </div>
-
-
             <div class="row">
                 <div class="col-sm-3">
                     <div class="blog_sidebar">
@@ -41,7 +32,9 @@
                 <div class="col-sm-9">
                     <div class="blog_content">
 
-                        <div class="post post-full">
+                        <h2>{{ $news->title }}</h2>
+
+                        <div class="post post-full"> 
                             <div class="post-header">
                                 <div class="post-image">
                                     @if ($news->has_video == '1')
@@ -54,6 +47,12 @@
                                 </div>
                             </div>
                             <div class="post-story">
+                                <div class="details2 clearfix">
+                                    <div class="left">Créé <span>|</span> Par: Admin <span>|</span> {{ $news->created_at }}</div>
+                                    <div class="right"><a href="https://www.facebook.com/sharer/sharer.php?u=#home&t=TITLE" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                                        target="_blank" class="share1"></a>
+                                    </div>
+                                </div>
                                 <div class="post-story-body clearfix">
                                     {!! html_entity_decode($news->description) !!}
                                 </div>

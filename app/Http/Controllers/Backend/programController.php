@@ -64,6 +64,7 @@ class programController extends Controller
                     'label' => $item->label,
                     'description' => $item->description,
                     'label' => $item->label,
+                    'day' => $item->day,
                     'date' => $item->date,
                     'time_start' => $item->time_start,
                     'time_end' => $item->time_end,
@@ -106,8 +107,16 @@ class programController extends Controller
             $time = \Carbon\Carbon::now()->toDateTimeString();
             $file = $request->file('cover');
             $date = $request->input('date');
+            $day = $request->input('day');
             $time_start = $request->input('time_start');
             $time_end = $request->input('time_end');
+
+            $day_string = '';
+
+            foreach($day as $item){
+                $day_string .= $item.', ';
+            }
+            $day_data = substr($day_string,0,-1);
 
             if( $request->hasFile('cover')){
                 $extensioncover = strtolower($file->getClientOriginalExtension());
@@ -132,6 +141,7 @@ class programController extends Controller
                 $program->label = $label;
                 $program->description = $description;
                 $program->date = $date;
+                $program->day = $day_data;
                 $program->time_start = $time_start;
                 $program->time_end = $time_end;
                 $program->author = $author;
@@ -163,6 +173,7 @@ class programController extends Controller
             $description = $request->input('description');
             $file = $request->file('cover');
             $date = $request->input('date');
+            $day = $request->input('day');
             $time_start = $request->input('time_start');
             $time_end = $request->input('time_end');
             $time = \Carbon\Carbon::now()->toDateTimeString();
@@ -181,6 +192,18 @@ class programController extends Controller
                 Storage::disk('public')->put($filename.'.'.$extension,  File::get($file));
                 
                 $program->cover = $filename.'.'.$extension;
+            }
+
+            if($request->input('day')){
+
+                $day_string = '';
+
+                foreach($day as $item){
+                    $day_string .= $item.', ';
+                }
+                $day_data = substr($day_string,0,-1);
+
+                $program->day = $day_data;
             }
 
             $program->title = $title;

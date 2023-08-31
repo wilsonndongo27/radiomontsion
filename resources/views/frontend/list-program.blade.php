@@ -20,7 +20,7 @@
 
             <div class="radios animated" data-animation="fadeInUp" data-animation-delay="300">
                 <div class="radio1 head clearfix">
-                    <div class="sec1">#</div>
+                    <div class="sec1"></div>
                     <div class="sec2">Titre du programme</div>
                     <div class="sec3">Libellé du programme</div>
                     <div class="sec4">Jour de diffusion</div>

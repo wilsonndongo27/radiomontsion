@@ -11,6 +11,7 @@ $(document).on('click','#updateprogram', function (e) {
     var id = $(this).data('id');
     var title = $(this).data('title');
     var label = $(this).data('label');
+    var day = $(this).data('day');
     var description = $(this).data('description');
     var date = $(this).data('date');
     var time_start = $(this).data('timestart');
@@ -19,6 +20,7 @@ $(document).on('click','#updateprogram', function (e) {
     $('#programid').val(id);
     $('#programtitle').val(title);
     $('#programlabel').val(label);
+    $('#programday').text(day);
 
     const delta = quill.clipboard.convert(description)
     quill.setContents(delta, 'silent')
